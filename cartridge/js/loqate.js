@@ -127,8 +127,6 @@ function loqate(type) {
 				"isLatin": isLatin
 			},
 			success: function( data ){  
-
-				//var addressDialog = document.getElementById('addressDialog');
 				var originalAddress = data[0].Input;
 				var correctedAddress = data[0].Matches[0];
 
@@ -313,7 +311,6 @@ function triggerAccountFormSubmit() {
     $('input[name$="_loqateAVSValidated"]').prop('checked', true);
     $('input[name$="_loqateAVSValidated"]').val(true);
 }
-
 
 exports.loqateResult = loqateResult;
 exports.loqate = loqate;

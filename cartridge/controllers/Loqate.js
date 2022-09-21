@@ -1,3 +1,11 @@
+
+/**
+* Returns an JSON object containing the Loqate Service Response. 
+*
+* @return      JSON Object
+* @see         Object
+*/
+
 function Verify() {
 
     var LocalServiceRegistry = require("dw/svc/LocalServiceRegistry");
@@ -14,14 +22,14 @@ function Verify() {
     var key = loqateSetup.key;
     var server = loqateSetup.server;
     var loqateAddress = JSON.parse(request.httpParameters.loqateAddress[0]);
-    
+
     var isLatin = request.httpParameters.isLatin;
 
     var loqateRequest = {
-        "Key": key,      
+        "Key": key,
         "Geocode": true,
         "Options": {
-        	"Certify": !empty(loqateAddress.country) && loqateAddress.country == 'US' ? true : false,
+            "Certify": !empty(loqateAddress.country) && loqateAddress.country == 'US' ? true : false,
             "Process": "Verify",
             "ServerOptions": {
                 "OutputAddressFormat": true,
@@ -31,7 +39,7 @@ function Verify() {
         "Addresses": [{
             "Organization": "",
             "Address": "",
-            "Address1": loqateAddress.address1, 
+            "Address1": loqateAddress.address1,
             "Address2": loqateAddress.address2,
             "Country": loqateAddress.country,
             "Locality": loqateAddress.city,
@@ -51,7 +59,7 @@ function Verify() {
             'requestMethod': 'POST',
             'requestBody': requestBody,
             'requestType': 'application/json',
-            'callUrl' : server
+            'callUrl': server
         };
 
         var loqateService = LocalServiceRegistry.createService("Loqate.Api", {
@@ -69,7 +77,7 @@ function Verify() {
                     statusCode: 201,
                     statusMessage: "mockExec"
                 };
-            } 
+            }
         });
         var loqateResponse = loqateService.call(requestParamsAuth);
         var loqateData = "";
@@ -81,7 +89,6 @@ function Verify() {
 
             var input = loqateData.Input;      //.Address . Country
             var match = loqateData.Matches[0]; //.Address . Country
-
         }
 
         if (!loqateResponse) {
@@ -89,11 +96,10 @@ function Verify() {
             Logger.error(error.toString());
             return;
         }
+
         if (loqateResponse.ok == false) {
             return JSON.parse(loqateResponse).error;
-        } else {
-           
-        }
+        } 
 
         var jsonResult = JSON.parse(loqateResponse.object.text);
         if (jsonResult == null) {
@@ -102,17 +108,11 @@ function Verify() {
         } else {
             response.getWriter().println(loqateResponse.object.text);
         }
-
-
-
-        // website_token = jsonResult.website_token;
-
     } catch (err) {
         var error = err.toString();
         Logger.error(error);
         return;
     }
-
 }
 
 exports.Verify = Verify;

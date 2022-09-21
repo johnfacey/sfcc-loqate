@@ -1,65 +1,72 @@
 <div id="addressDialog">
-    <form method="dialog">
-        <p><label>
-                <h4 class="addressDialogTitle">${Resource.msg('account.loqate.select', 'account', null)}</h4>
-                <div class="addressDialogElem">
+	<form method="dialog">
+		<p><label>
+				<h4 class="addressDialogTitle">${Resource.msg('account.loqate.select', 'account', null)}</h4>
+				<div class="addressDialogElem">
 
-                    <div>
-                        <div class="addressDialogElemText">${Resource.msg('account.loqate.original', 'account', null)}:</div>
-                        <div id="originalAddress"></div>
-                        <menu>
-                            <input type="radio" class="input-radio" id="rbOrigAddress" name="rbConfirmAddress"
-                                value="0" />
-                            <label for="rbOrigAddress"></label>
-                        </menu>
-                    </div>
-                </div>
+					<div>
+						<div class="addressDialogElemText">${Resource.msg('account.loqate.original', 'account', null)}:
+						</div>
+						<div id="originalAddress"></div>
+						<menu>
+							<input type="radio" class="input-radio" id="rbOrigAddress" name="rbConfirmAddress"
+								value="0" />
+							<label for="rbOrigAddress"></label>
+						</menu>
+					</div>
+				</div>
 
-                <div class="addressDialogElem">
-                    <div class="addressDialogElemText">${Resource.msg('account.loqate.suggested', 'account', null)}: </div>
-                    <div id="correctedAddress"> </div>
+				<div class="addressDialogElem">
+					<div class="addressDialogElemText">${Resource.msg('account.loqate.suggested', 'account', null)}:
+					</div>
+					<div id="correctedAddress"> </div>
 
-                    <menu>
-                        <input type="radio" class="input-radio" id="rbNewAddress" name="rbConfirmAddress" value="1"
-                            checked />
-                        <label for="rbNewAddress"></label>
-                    </menu>
-                </div>
+					<menu>
+						<input type="radio" class="input-radio" id="rbNewAddress" name="rbConfirmAddress" value="1"
+							checked />
+						<label for="rbNewAddress"></label>
+					</menu>
+				</div>
 
-                <div>
-                    <menu>
-                        <button class="loqate-center" id="confirmAddress" data-formtype="" >${Resource.msg('account.loqate.confirm', 'account', null)}</button>
-                    </menu>
-                </div>
+				<div>
+					<menu>
+						<button class="loqate-center" id="confirmAddress"
+							data-formtype="">${Resource.msg('account.loqate.confirm', 'account', null)}</button>
+					</menu>
+				</div>
 
-            </label></p>
-    </form>
+			</label></p>
+	</form>
 </div>
 
-
-
 <div id="addressDialogInvalid">
-    <form method="dialog">
-        <p><label>
-                <h4 class="addressDialogTitle">${Resource.msg('account.loqate.addresserror', 'account', null)}</h4>
+	<form method="dialog">
+		<p>
+			<label>
+				<h4 class="addressDialogTitle">${Resource.msg('account.loqate.addresserror', 'account', null)}</h4>
 
-                <p><label>
-                        <h4 class="addressDialogTitle">
-                            <div>${Resource.msg('account.loqate.addresserror1', 'account', null)}</div>
-                            <div>${Resource.msg('account.loqate.addresserror2', 'account', null)}</div>
-                        </h4>
+				<p>
+					<label>
+						<h4 class="addressDialogTitle">
+							<div>${Resource.msg('account.loqate.addresserror1', 'account', null)}</div>
+							<div>${Resource.msg('account.loqate.addresserror2', 'account', null)}</div>
+						</h4>
 
-                        <div>
-                            <p><label>
-                                    <h4 class="addressDialogTitle"><button class="loqate-center"
-                                            id="closeLoqate">${Resource.msg('account.loqate.close', 'account', null)}</button></h4>
-                                    <menu>
+						<div>
+							<p>
+								<label>
+									<h4 class="addressDialogTitle"><button class="loqate-center"
+											id="closeLoqate">${Resource.msg('account.loqate.close', 'account',
+											null)}</button></h4>
+									<menu>
 
-                                    </menu>
-                           </label> </p>
-                        </div>
+									</menu>
+								</label>
+							</p>
+						</div>
 
-                    </label></p>
-
-    </form>
+					</label>
+				</p>
+			</p>
+	</form>
 </div>
