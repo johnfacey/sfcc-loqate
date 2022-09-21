@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://www.demandware.com/xml/impex/services/2014-09-26">
+    <service-credential service-credential-id="Loqate.Credentials">
+        <url/>
+        <user-id>jfacey</user-id>
+        <password encrypted="true" encryption-type="common.export">BvsYXmPo6drwR9W02h3Bmn9NQqIYCtMAr1//aeATlLeQE3Dc0g4QGhOtXgBmmGMk</password>
+    </service-credential>
+
+    <service-profile service-profile-id="Loqate.Profile">
+        <timeout-millis>0</timeout-millis>
+        <rate-limit-enabled>false</rate-limit-enabled>
+        <rate-limit-calls>0</rate-limit-calls>
+        <rate-limit-millis>0</rate-limit-millis>
+        <cb-enabled>false</cb-enabled>
+        <cb-calls>0</cb-calls>
+        <cb-millis>0</cb-millis>
+    </service-profile>
+
+    <service service-id="Loqate.Api">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>Loqate</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>true</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>Loqate.Profile</profile-id>
+        <credential-id>Loqate.Credentials</credential-id>
+    </service>
+
+</services>

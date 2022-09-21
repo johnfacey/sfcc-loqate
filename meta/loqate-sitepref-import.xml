@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+
+            <attribute-definition attribute-id="loqateAccountCode">
+                <display-name xml:lang="x-default">Loqate Account Code</display-name>
+                <type>string</type>
+                <mandatory-flag>true</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="loqateCustomCode">
+                <display-name xml:lang="x-default">Loqate Custom Code</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="loqateSetup">
+                <display-name xml:lang="x-default">Loqate Setup</display-name>
+                <description xml:lang="x-default">loqateSetup</description>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="loqate_tag">
+                <display-name xml:lang="x-default">Loqate Tag</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>&lt;script&gt;(function(n,t,i,r){var u,f;n[i]=n[i]||{},n[i].initial={accountCode:"ADRSY11505",host:"ADRSY11505.addressy.com"},n[i].on=n[i].on||function(){(n[i].onq=n[i].onq||[]).push(arguments)},u=t.createElement("script"),u.async=!0,u.src=r,f=t.getElementsByTagName("script")[0],f.parentNode.insertBefore(u,f)})(window,document,"pca","//ADRSY11505.addressy.com/js/sensor.js")&lt;/script&gt;</default-value>
+            </attribute-definition>
+</custom-attribute-definitions>        
+		<group-definitions>
+
+            <attribute-group group-id="Loqate">
+                <display-name xml:lang="x-default">Loqate</display-name>
+                <attribute attribute-id="loqateAccountCode"/>
+                <attribute attribute-id="loqateCustomCode"/>
+                <attribute attribute-id="loqateSetup"/>
+            </attribute-group>
+ 
+        </group-definitions>
+    </type-extension>
+
+
+</metadata>

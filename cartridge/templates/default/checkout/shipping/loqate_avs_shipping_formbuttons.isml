@@ -1,0 +1,6 @@
+<!--- TEMPLATENAME: loqate_avs_shipping_formbuttons.isml --->
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<isinclude template="util/modules"/>
+
+<button id="shipping-submit-main"class="button-fancy-large" type="submit" name="${pdict.CurrentForms.singleshipping.shippingAddress.save.htmlName}" value="${Resource.msg('global.continuebilling','locale',null)}"><span>${Resource.msg('global.continuebilling','locale',null)}</span></button>
+<button id="shipping-submit-suggested" style="display:none" class="button-fancy-large" type="submit" name="${pdict.CurrentForms.singleshipping.shippingAddress.save.htmlName}" value="${Resource.msg('global.continuebilling','locale',null)}"><span>${Resource.msg('global.continuebilling','locale',null)}</span></button>

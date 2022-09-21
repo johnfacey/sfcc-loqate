@@ -1,0 +1,4 @@
+<!--- TEMPLATENAME: loqate.isml --->
+<isscript> importScript("int_loqate:libLoqate.ds"); </isscript>
+<isprint value="${(new Loqate()).getTag()}" encoding="off" />
+<isprint value="${(new Loqate()).getCustomCode()}" encoding="off" />
